@@ -20,6 +20,9 @@ function addPatient(){
 
 }
 
+addPatientButton.addEventListener("click", addPatient);
+
+
 function resetForm(){
     document.getElementById("name").value="";
     document.querySelector('input[name="gender"]:checked').checked=false;
@@ -35,7 +38,7 @@ function searchCondition(){
     fetch('health_analysis.json')
         .then(response=> response.json())
         .then(data=>{
-            const condition=data.condition.find(item=> item.name.toLowerCase()===input);
+            const condition=data.conditions.find(item=> item.name.toLowerCase()===input);
 
             if(condition){
                 const symptoms=condition.symptoms.join(', ');
@@ -103,4 +106,4 @@ function generateReport(){
     }   
 }
 
-addPatientButton.addEventListener("click", addPatient);
+
