@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <title>Health Analysis Data</title>
+        <link rel="stylesheet" href="./health_analysis.css">
+
+    </head>
+
+    <body>
+
+<!-- Use <nav> when you have a set of links that users will use to navigate the website. -->
+        <nav>
+            <h1>HEALTH ANALYSIS CENSUS</h1>
+
+            <ul>
+                <li><a href="./index.html" id="home">Home </a></li>
+                <li><a href="./health_contact.html" id="contact">Contact Us</a></li>
+                <li><input type="text" id="conditionsInput" placeholder="Enter a health condition"> </li>
+                <li><button id='btnsSearch'>Search </button></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="analysisForm">
+                <h2>Healthcare Data Analysis</h2>
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+<!-- The input element with type="radio" in HTML is used to create a radio button, which allows users to select one option from a group of choices. -->
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age">
+                </div>
+                <div>
+                    <label for="condition">Condition:</label>
+                    <select id="condition">
+                        <option value="">Select condition</option>
+                        <option value="Thyroid">Thyroid</option>
+                        <option value="Diabtes">Diabetes</option>
+                        <option value="High Blood Pressure">High Blood Pressure</option>
+                    </select>
+<!-- A drop down <select> menu allowing the selection of a patient's medical condition -->
+                </div>
+                <button id="addPatient">Add Patient</button>
+                
+                <h2>Analysis Report</h2>
+                <div id="report">
+
+                </div>
+                <div id="searchCondition">
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./health_analysis.js"></script>
+    </body>
+</html>
